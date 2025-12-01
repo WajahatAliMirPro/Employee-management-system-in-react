@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+/* --------------------------------------------------
+   BASE – Clean & Professional
+-------------------------------------------------- */
+@layer base {
+  html {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* --------------------------------------------------
+   COMPONENTS – Clean, Stylish, Readable
+-------------------------------------------------- */
+@layer components {
+
+  /* Primary Button */
+  .btn-primary {
+    @apply px-4 py-2 rounded-lg font-medium text-white bg-blue-600 hover:bg-blue-700 shadow-sm hover:shadow-lg transition-all duration-300 active:scale-95;
+  }
+
+  /* Secondary Button */
+  .btn-secondary {
+    @apply px-4 py-2 rounded-lg font-medium bg-gray-100 text-gray-800 border border-gray-300 hover:bg-gray-200 transition-all duration-300 active:scale-95;
+  }
+
+  /* Danger Button */
+  .btn-danger {
+    @apply px-4 py-2 rounded-lg font-medium text-white bg-red-600 hover:bg-red-700 shadow-sm hover:shadow-lg transition-all duration-300 active:scale-95;
+  }
+
+  /* Input Fields */
+  .input-field {
+    @apply w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 outline-none;
+  }
+
+  /* Cards – smooth, premium, modern */
+  .card {
+    @apply bg-white text-gray-900 rounded-xl border border-gray-200 p-6 shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+
+  .card-shadow {
+    @apply shadow-md hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Fade-in Animation */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  /* Soft floating animation */
+  .animate-float {
+    animation: floatUpDown 3s ease-in-out infinite;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes floatUpDown {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-6px);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+}

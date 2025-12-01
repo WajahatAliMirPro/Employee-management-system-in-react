@@ -1,0 +1,150 @@
+/* --------------------------------------------------
+   Global Enhancements – Clean & Modern
+-------------------------------------------------- */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* --------------------------------------------------
+   Loading Screen
+-------------------------------------------------- */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4f8bfd, #6f7bff);
+    color: rgb(255, 3, 3);
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------
+   Smooth Hover + Transitions
+-------------------------------------------------- */
+button,
+a,
+input,
+select,
+textarea {
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* --------------------------------------------------
+   Table Styling
+-------------------------------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    color: #374151;
+}
+
+table tr:hover {
+    background-color: #f3f4f6;
+}
+
+.table-container {
+    overflow-x: auto;
+    width: 100%;
+}
+
+/* --------------------------------------------------
+   Scrollbar Styling
+-------------------------------------------------- */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9ca3af;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+}
+
+/* --------------------------------------------------
+   Form Focus
+-------------------------------------------------- */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35);
+}
+
+/* --------------------------------------------------
+   Navbar Styling
+-------------------------------------------------- */
+nav {
+    width: 100%;
+    background: rgb(59, 60, 63);
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+nav .nav-holder {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --------------------------------------------------
+   Responsive Adjustments
+-------------------------------------------------- */
+@media (max-width: 1024px) {
+    .card {
+        padding: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    nav .nav-holder {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        font-size: 0.9rem;
+        padding: 0.65rem 0.8rem;
+    }
+
+    .card {
+        padding: 0.75rem !important;
+    }
+}
